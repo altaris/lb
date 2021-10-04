@@ -53,16 +53,13 @@
 \date{ {{ cookiecutter.date }} }
 {% else -%}
 \date{ {% now 'local', '%Y' %} }
-{% endif -%}
-
+{% endif %}
 \author{ {{ cookiecutter.full_name }} }
-
 {% if cookiecutter.institute != "" -%}
 \institute{ {{ cookiecutter.institute }} }
 {% else -%}
 % \institute{}
-{% endif -%}
-
+{% endif %}
 % ------------------------------------------------------------------------------
 % DOCUMENT
 % ------------------------------------------------------------------------------
