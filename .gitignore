@@ -1,0 +1,6 @@
+## VSCode
+*.code-workspace
+.vscode/
+
+## MacOS littering everywhere
+.DS_Store

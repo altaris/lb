@@ -1,0 +1,103 @@
+% ------------------------------------------------------------------------------
+% DOCUMENT CLASS
+% ------------------------------------------------------------------------------
+
+\documentclass[aspectratio=169]{beamer}
+
+% https://ctan.tetaneutral.net/macros/latex/contrib/beamer-contrib/themes/metropolis/doc/metropolistheme.pdf
+\usetheme[
+    block               = fill,
+    numbering           = counter,
+    progressbar         = frametitle,
+    titleformat title   = smallcaps,
+]{metropolis}
+
+% ------------------------------------------------------------------------------
+% PACKAGES
+% ------------------------------------------------------------------------------
+
+\usepackage[
+    eientei,
+    +maths,
+    +tikz,
+    scriptStyle = euler
+]{kappak-beamer}
+
+\usepackage{MnSymbol}
+\usepackage{tikz-cd}
+
+% -----------------------------------------------------------------------------
+% CONFIGURATION
+% -----------------------------------------------------------------------------
+
+\beamerdefaultoverlayspecification{<+->}
+\setbeamercolor{background canvas}{bg = white}
+
+% -----------------------------------------------------------------------------
+% MACROS
+% -----------------------------------------------------------------------------
+
+\input{macros.tex}
+
+% -----------------------------------------------------------------------------
+% METADATA
+% -----------------------------------------------------------------------------
+
+\title{ {{ cookiecutter.title }} }
+{% if cookiecutter.subtitle != "" -%}
+\subtitle{ {{ cookiecutter.subtitle }} }
+{% else -%}
+% \subtitle{}
+{% endif -%}
+{% if cookiecutter.date != "" -%}
+\date{ {{ cookiecutter.date }} }
+{% else -%}
+\date{ {% now 'local', '%Y' %} }
+{% endif -%}
+
+\author{ {{ cookiecutter.full_name }} }
+
+{% if cookiecutter.institute != "" -%}
+\institute{ {{ cookiecutter.institute }} }
+{% else -%}
+% \institute{}
+{% endif -%}
+
+% ------------------------------------------------------------------------------
+% DOCUMENT
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------------------------------------
+
+\maketitle
+
+\begin{frame}{Table of contents}
+    \tableofcontents
+\end{frame}
+
+% -------------------------------------------------------------------
+
+\begin{frame}{Title}
+    Content
+\end{frame}
+
+% -------------------------------------------------------------------
+
+\begin{frame}[standout]
+    Thank you for your attention!
+\end{frame}
+
+% \begin{frame}[allowframebreaks]{References}
+%     \bibliographystyle{apalike}
+%     \begin{tiny}
+%         \bibliography{bibliography.bib}
+%     \end{tiny}
+% \end{frame}
+
+\begin{frame}{Whiteboard}
+    ~~~~
+\end{frame}
+
+\end{document}
